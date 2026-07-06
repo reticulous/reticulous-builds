@@ -1,7 +1,7 @@
 name: Build firmware
 
 # Manually triggered: builds every entry in builds.yaml and commits the
-# resulting main/<name>.zip back to this repo.
+# resulting <name>.zip back to this repo root.
 on:
   workflow_dispatch:
 
@@ -30,7 +30,7 @@ jobs:
           set -eu
           # Build in a workspace outside the checkout so cloned straddles never
           # mix into this repo. make-builds writes each flasher.zip to
-          # <this checkout>/main/<name>.zip.
+          # <this checkout>/<name>.zip.
           spangap init "$HOME/spangap-ws"
           cd "$HOME/spangap-ws"
           spangap make-builds "$GITHUB_WORKSPACE"
@@ -41,7 +41,7 @@ jobs:
           cd "$GITHUB_WORKSPACE"
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add main/*.zip
+          git add ./*.zip
           if git diff --cached --quiet; then
             echo "No image changes to commit."
           else
