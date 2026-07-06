@@ -1,0 +1,12 @@
+# reticulous-builds — the firmware images published for the Reticulous project.
+#
+# Each entry maps a short name to a `spangap build` invocation. `spangap
+# make-builds` builds every entry and writes its flasher.zip to main/<name>.zip;
+# the web flasher (spangap/flasher) fetches main/<name>.zip for ?build=<name>.
+builds:
+  - name: tdeck
+    invocation: reticulous/reticulous --with spangap/hw-tdeck
+  - name: heltecv4
+    invocation: reticulous/reticulous --with spangap/hw-heltecv4
+  - name: generic
+    invocation: reticulous/reticulous
