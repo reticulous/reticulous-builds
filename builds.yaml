@@ -4,10 +4,15 @@
 # make-builds` builds every entry and writes its flasher.zip to <name>.zip in the
 # repo root; the web flasher (spangap/flasher) fetches <branch>/<name>.zip for
 # ?build=<name> (branch from ?branch=, default main).
+#
+# Order matters: each build rewrites the workspace's remembered target
+# (.spangap-build), so the LAST entry is what a bare `spangap build`/`spangap`
+# resolves to afterwards. tdeck is kept last so the workspace lands on the
+# T-Deck (the primary dev target) once make-builds finishes.
 builds:
-  - name: tdeck
-    invocation: reticulous/reticulous --with spangap/hw-tdeck
   - name: heltecv4
     invocation: reticulous/reticulous --with spangap/hw-heltecv4
   - name: generic
     invocation: reticulous/reticulous
+  - name: tdeck
+    invocation: reticulous/reticulous --with spangap/hw-tdeck
