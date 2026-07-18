@@ -12,6 +12,8 @@
 builds:
   - name: heltecv4
     invocation: reticulous/reticulous --with spangap/hw-heltecv4
+  - name: nibblezero
+    invocation: reticulous/reticulous --with spangap/hw-nibble-zero
   - name: generic
     invocation: reticulous/reticulous
   - name: tdeck
