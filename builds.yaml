@@ -14,6 +14,10 @@ builds:
     invocation: reticulous/reticulous --with spangap/hw-heltecv4
   - name: nibblezero
     invocation: reticulous/reticulous --with spangap/hw-nibble-zero
+  - name: xiao-sx1262
+    invocation: reticulous/reticulous --with spangap/hw-xiao-sx1262
+  - name: t3s3
+    invocation: reticulous/reticulous --with spangap/hw-lilygo-t3s3
   - name: generic
     invocation: reticulous/reticulous
   - name: tdeck

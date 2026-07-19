@@ -12,8 +12,9 @@ served to the browser flasher.
   from `?branch=<ref>` (default `main`).
 
 Current builds: `tdeck` (LilyGO T-Deck Plus), `heltecv4` (Heltec WiFi LoRa 32 V4,
-headless), `nibblezero` (Retia Nibble Zero, headless), `generic` (any ESP32-S3
-with PSRAM, WiFi-only, no mesh radio).
+headless), `nibblezero` (Retia Nibble Zero, headless), `xiao-sx1262` (Seeed XIAO
+ESP32S3 + Wio-SX1262, headless), `t3s3` (LilyGo T3-S3 SX1262 + microSD,
+headless), `generic` (any ESP32-S3 with PSRAM, WiFi-only, no mesh radio).
 
 ## Producing the images
 
